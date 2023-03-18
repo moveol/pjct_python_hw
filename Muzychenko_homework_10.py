@@ -18,7 +18,7 @@ if check_status_code(response_giphy):
         print(gif['url'])
 
 # 2. Взяти API-weather, розпарсити і вивезти погоду від користувача
-user_city = input('Enter city name: ').strip()
+user_city = input('Enter city name: ').strip().capitalize()
 response_open_weather = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q={user_city}&\
 appid=38c90b55812d1743119071db5332847f')
 if check_status_code(response_open_weather):
