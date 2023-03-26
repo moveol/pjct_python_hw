@@ -31,7 +31,6 @@ def catch_errors(func):
             return func(*args, **kwargs)
         except Exception as error_type:
             print(f"An error occurred during execution: {type(error_type).__name__}")
-
     return wrapper
 
 
